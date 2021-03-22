@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Route::get('/about', function () {
-//     return view('about');
+//     return view('about');00
 // });
 
 // Route::get('/contact', function () {
@@ -32,3 +32,6 @@ Route::view("contact",'contact');
 // Route::get("path","controller file");
 // Routes::get("users","Users@index");
 Route::get("users/{user}",[Users::class,'index']);
+
+
+Route::view("users",'users');
