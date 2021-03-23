@@ -40,6 +40,7 @@ Route::get("/users/{name}",function($name){
     return view("users",['name'=>$name]);
 });
 
-Route::get("user/{name}",[UsersController::class,'loadView']);
+// Route::get("user/{name}",[UsersController::class,'loadView']);
 
-// Route::view("users","users");
+Route::view("users","users");
+Route::view("about","about");
