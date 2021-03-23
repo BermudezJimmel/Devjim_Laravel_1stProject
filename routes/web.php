@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,14 @@ Route::view("contact",'contact');
 
 // Route::get("path","controller file");
 // Routes::get("users","Users@index");
-Route::get("users/{user}",[Users::class,'index']);
+
+// Route::get("users/{user}",[Users::class,'index']);
 
 
-Route::view("users",'users');
+Route::get("/users/{name}",function($name){
+    return view("users",['name'=>$name]);
+});
+
+Route::get("user/{name}",[UsersController::class,'loadView']);
+
+// Route::view("users","users");
